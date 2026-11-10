@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="dark scroll-smooth">
 <head>
-    <!-- ==================== META & INFORMASI DASAR ==================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Saepul Anwar - Junior Web Developer</title>
@@ -14,538 +13,18 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- ==================== GAYA CSS (DISATUKAN DENGAN HTML) ==================== -->
-    <style>
-/* ==================== CSS VARIABLES (TEMA TERANG & GELAP) ==================== */
-:root {
-    /* Font Utama */
-    --font-sans: 'Inter', sans-serif;
-    --font-heading: 'Plus Jakarta Sans', sans-serif;
-
-    /* Warna Mode Terang (Light Mode) */
-    --bg-body: #f8fafc;
-    --bg-nav: rgba(255, 255, 255, 0.8);
-    --bg-card: #ffffff;
-    --bg-card-alt: #f8fafc;
-    --bg-hover: #f1f5f9;
-    
-    --text-main: #1e293b;
-    --text-muted: #475569;
-    --text-light: #64748b;
-    
-    --border-color: rgba(226, 232, 240, 0.8);
-    --border-hover: #cbd5e1;
-    
-    --primary: #6366f1;
-    --primary-hover: #4f46e5;
-    --primary-light: #e0e7ff;
-    --primary-text: #4f46e5;
-}
-
-html.dark {
-    /* Warna Mode Gelap (Dark Mode) */
-    --bg-body: #020617;
-    --bg-nav: rgba(15, 23, 42, 0.8);
-    --bg-card: #0f172a;
-    --bg-card-alt: #1e293b; /* slate-800 */
-    --bg-hover: rgba(30, 41, 59, 0.6);
-    
-    --text-main: #f1f5f9;
-    --text-muted: #cbd5e1;
-    --text-light: #94a3b8;
-    
-    --border-color: rgba(30, 41, 59, 0.8); /* slate-800 */
-    --border-hover: rgba(99, 102, 241, 0.6); /* indigo-500/60 */
-    
-    --primary: #6366f1;
-    --primary-hover: #818cf8;
-    --primary-light: rgba(99, 102, 241, 0.15);
-    --primary-text: #818cf8;
-}
-
-/* ==================== RESET & GAYA DASAR ==================== */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html.scroll-smooth { scroll-behavior: smooth; }
-body {
-    font-family: var(--font-sans);
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    overflow-x: hidden;
-    line-height: 1.5;
-}
-::selection { background: #6366f1; color: white; }
-a { text-decoration: none; color: inherit; }
-ul { list-style: none; }
-button, input, textarea { font-family: inherit; }
-.font-heading { font-family: var(--font-heading); }
-
-/* Kustomisasi Scrollbar */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #0f172a; }
-::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #6366f1; }
-
-/* ==================== KELAS UTILITAS ==================== */
-.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 1rem; }
-@media (min-width: 640px) { .container { padding: 0 1.5rem; } }
-@media (min-width: 1024px) { .container { padding: 0 2rem; } }
-
-.glass-nav {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-}
-
-.text-gradient {
-    background: linear-gradient(to right, #4f46e5, #8b5cf6, #fbbf24);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.brand-gradient {
-    background: linear-gradient(to right, #0f172a, #475569);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-html.dark .brand-gradient {
-    background: linear-gradient(to right, #ffffff, #94a3b8);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.badge {
-    display: inline-flex; align-items: center; justify-content: center;
-    padding: 0.125rem 0.625rem; border-radius: 0.375rem;
-    font-size: 0.75rem; font-weight: 500;
-}
-
-/* ==================== FITUR: NAVBAR (NAVIGASI ATAS) ==================== */
-.navbar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-    background-color: var(--bg-nav);
-    border-bottom: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 5rem; }
-.logo { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.025em; }
-
-/* Tautan menu navigasi */
-.desktop-menu { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-
-.nav-link {
-    padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; font-weight: 500;
-    color: var(--text-muted); transition: all 0.2s ease;
-}
-.nav-link:hover { color: var(--primary-text); background-color: var(--bg-hover); }
-.nav-link.active { color: var(--primary-text); background-color: var(--primary-light); }
-
-.btn-icon {
-    padding: 0.625rem; border-radius: 0.75rem; background: var(--bg-hover);
-    color: var(--text-muted); border: none; cursor: pointer; transition: all 0.2s ease;
-    display: inline-flex; align-items: center; justify-content: center;
-}
-.btn-icon:hover { filter: brightness(0.9); }
-html.dark .btn-icon { color: #fbbf24; }
-html.dark .btn-icon:hover { filter: brightness(1.2); }
-
-/* ==================== FITUR: HERO SECTION (BANNER UTAMA) ==================== */
-.hero { position: relative; padding: 8rem 0 5rem; overflow: hidden; }
-@media (min-width: 768px) { .hero { padding: 10rem 0 7rem; } }
-
-/* Background Blobs */
-.blob-1 { position: absolute; top: 5rem; left: 50%; transform: translateX(-50%); width: 600px; height: 300px; background: rgba(99, 102, 241, 0.1); filter: blur(120px); border-radius: 50%; pointer-events: none; }
-.blob-2 { position: absolute; bottom: 2.5rem; right: 2.5rem; width: 288px; height: 288px; background: rgba(139, 92, 246, 0.1); filter: blur(100px); border-radius: 50%; pointer-events: none; }
-
-.hero-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; position: relative; z-index: 10; }
-@media (min-width: 1024px) { .hero-grid { grid-template-columns: 7fr 5fr; text-align: left; } }
-
-.hero-content { text-align: center; }
-@media (min-width: 1024px) { .hero-content { text-align: left; } }
-
-.hero-title { font-size: 2.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem; letter-spacing: -0.025em; }
-@media (min-width: 640px) { .hero-title { font-size: 3rem; } }
-@media (min-width: 1024px) { .hero-title { font-size: 3.75rem; } }
-
-.hero-desc { color: var(--text-light); font-size: 1rem; line-height: 1.625; max-width: 42rem; margin: 0 auto 2.25rem; }
-@media (min-width: 1024px) { .hero-desc { margin-left: 0; font-size: 1.125rem; } }
-
-.btn-group { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 1rem; }
-@media (min-width: 1024px) { .btn-group { justify-content: flex-start; } }
-
-.btn { display: inline-flex; align-items: center; gap: 0.625rem; padding: 0.875rem 1.75rem; border-radius: 0.75rem; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s ease; border: none; }
-.btn-primary { background: #4f46e5; color: white; box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.25); }
-.btn-primary:hover { background: #6366f1; transform: translateY(-2px); }
-.btn-outline { background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border-color); }
-.btn-outline:hover { background: var(--bg-hover); transform: translateY(-2px); }
-
-/* ==================== FITUR: BINGKAI FOTO PROFIL MODERN (BERSIH TANPA ATRIBUT) ==================== */
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 1rem 0;
-}
-
-/* Ambient Aura Halus di Belakang Foto */
-.profile-container::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20rem;
-    height: 24rem;
-    border-radius: 2rem;
-    background: radial-gradient(ellipse at center, rgba(99, 102, 241, 0.18) 0%, rgba(139, 92, 246, 0.08) 50%, transparent 75%);
-    pointer-events: none;
-    z-index: 0;
-}
-@media (min-width: 640px) {
-    .profile-container::before {
-        width: 23rem;
-        height: 27rem;
-    }
-}
-
-/* Frame Foto Sesuai Foto CV (Bingkai Persegi Emas Elegan) */
-.profile-frame {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 18rem;
-    height: 23rem;
-    border-radius: 1.25rem;
-    padding: 0.625rem;
-    background: var(--bg-card);
-    border: 3px solid #fbbf24;
-    box-shadow: 
-        0 0 25px -5px rgba(251, 191, 36, 0.35),
-        0 20px 45px -15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-}
-@media (min-width: 640px) {
-    .profile-frame {
-        max-width: 19.5rem;
-        height: 24.5rem;
-        padding: 0.75rem;
-    }
-}
-
-html:not(.dark) .profile-frame {
-    background: #ffffff;
-    border: 3px solid #f59e0b;
-    box-shadow: 
-        0 0 25px -5px rgba(245, 158, 11, 0.25),
-        0 20px 40px -15px rgba(0, 0, 0, 0.1);
-}
-
-.profile-frame:hover {
-    transform: translateY(-6px);
-    border-color: #fde047;
-    box-shadow: 
-        0 0 40px -5px rgba(251, 191, 36, 0.55),
-        0 25px 50px -15px rgba(0, 0, 0, 0.6);
-}
-
-.profile-frame-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.875rem;
-    overflow: hidden;
-    position: relative;
-    background: #0f172a;
-    border: 1px solid rgba(251, 191, 36, 0.25);
-}
-
-html:not(.dark) .profile-frame-inner {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-}
-
-.profile-frame-inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 15%;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.profile-frame:hover .profile-frame-inner img {
-    transform: scale(1.03);
-}
-
-/* ==================== FITUR: PENGATURAN UMUM SECTION ==================== */
-.section-padding { padding: 5rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
-.bg-alt { background-color: var(--bg-card); }
-
-.section-header { text-align: center; max-width: 42rem; margin: 0 auto 3.5rem; }
-.section-subtitle { color: var(--primary-text); font-weight: 600; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; }
-.section-title { font-size: 1.875rem; font-weight: 800; margin-top: 0.5rem; }
-@media (min-width: 640px) { .section-title { font-size: 2.25rem; } }
-.section-desc { color: var(--text-light); margin-top: 0.75rem; font-size: 0.875rem; }
-@media (min-width: 640px) { .section-desc { font-size: 1rem; } }
-.divider { width: 4rem; height: 0.375rem; background: var(--primary); margin: 1rem auto 0; border-radius: 9999px; }
-
-/* Tata Letak Grid & Kartu */
-.grid-12 { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
-@media (min-width: 1024px) { .grid-12 { grid-template-columns: repeat(12, 1fr); } }
-
-.col-7 { grid-column: span 12; }
-.col-6 { grid-column: span 12; }
-.col-5 { grid-column: span 12; }
-@media (min-width: 1024px) { .col-7 { grid-column: span 7; } .col-6 { grid-column: span 6; } .col-5 { grid-column: span 5; } }
-
-.card { background: var(--bg-card); padding: 1.5rem; border-radius: 1rem; border: 1px solid var(--border-color); box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); }
-@media (min-width: 640px) { .card { padding: 2rem; } }
-.card-alt { background: var(--bg-card-alt); }
-.h-100 { height: 100%; }
-
-.card-header { display: flex; align-items: center; gap: 0.625rem; margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 700; color: var(--text-main); }
-.icon-box { width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; font-size: 1.125rem; }
-
-/* ==================== FITUR: RIWAYAT PENDIDIKAN & PETA LOKASI ==================== */
-.timeline { position: relative; padding-left: 1.5rem; border-left: 2px solid rgba(99, 102, 241, 0.4); display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
-.timeline-item { position: relative; }
-.timeline-dot { position: absolute; left: -1.9rem; top: 0.25rem; width: 1rem; height: 1rem; border-radius: 50%; border: 4px solid var(--bg-card); }
-.timeline-date { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 0.125rem 0.625rem; border-radius: 9999px; margin-bottom: 0.25rem; }
-
-.map-wrapper { width: 100%; height: 20rem; border-radius: 0.75rem; overflow: hidden; border: 1px solid var(--border-color); margin-bottom: 1rem; }
-.map-wrapper iframe { width: 100%; height: 100%; border: none; }
-
-/* ==================== FITUR: KEMAMPUAN (SKILLS) ==================== */
-.skills-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
-@media (min-width: 640px) { .skills-grid { grid-template-columns: repeat(2, 1fr); } }
-
-.skill-item { padding: 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: all 0.3s ease; }
-.skill-item:hover { border-color: var(--primary); transform: translateY(-2px); }
-.skill-item-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
-
-.tools-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.875rem; }
-@media (min-width: 640px) { .tools-grid { grid-template-columns: repeat(3, 1fr); } }
-
-.tool-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.875rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); transition: all 0.3s ease; font-size: 0.875rem; font-weight: 700; }
-.tool-item:hover { border-color: var(--primary); }
-
-.soft-skill-list { display: flex; flex-direction: column; gap: 0.875rem; }
-.soft-skill-item { display: flex; align-items: flex-start; gap: 0.875rem; padding: 0.875rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); }
-.soft-skill-icon { width: 2.25rem; height: 2.25rem; border-radius: 0.5rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.125rem; }
-
-/* ==================== FITUR: PORTOFOLIO PROJEK ==================== */
-.project-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-@media (min-width: 768px) { .project-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .project-grid { grid-template-columns: repeat(3, 1fr); } }
-
-.project-card { display: flex; flex-direction: column; background: var(--bg-card); border-radius: 1rem; overflow: hidden; border: 1px solid var(--border-color); transition: all 0.3s ease; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
-.project-card:hover { border-color: rgba(99, 102, 241, 0.6); transform: translateY(-6px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-
-.project-img-wrapper { position: relative; height: 13rem; overflow: hidden; background: #1e293b; }
-.project-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.project-card:hover .project-img { transform: scale(1.05); }
-
-.project-date { position: absolute; top: 0.75rem; left: 0.75rem; padding: 0.25rem 0.75rem; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 700; backdrop-filter: blur(4px); }
-
-.project-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
-.project-tags { display: flex; flex-wrap: wrap; gap: 0.375rem; margin-bottom: 0.75rem; }
-.project-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem; transition: color 0.3s ease; }
-.project-card:hover .project-title { color: var(--primary-text); }
-.project-desc { font-size: 0.875rem; color: var(--text-light); line-height: 1.625; margin-bottom: 0; }
-
-/* ==================== FITUR: KONTAK & INFORMASI ==================== */
-.contact-info-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 1.75rem;
-}
-@media (min-width: 640px) {
-    .contact-info-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-.contact-info-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 1.25rem;
-    border-radius: 0.875rem;
-    background: var(--bg-card-alt);
-    border: 1px solid var(--border-color);
-    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    text-decoration: none;
-    color: inherit;
-}
-.contact-info-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--primary);
-    box-shadow: 0 8px 20px -6px rgba(99, 102, 241, 0.25);
-}
-.contact-info-icon {
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    flex-shrink: 0;
-}
-.contact-info-label {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-weight: 500;
-    margin-bottom: 0.15rem;
-}
-.contact-info-val {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--text-main);
-    line-height: 1.35;
-    margin: 0;
-    word-break: break-word;
-}
-
-.btn-whatsapp {
-    width: 100%;
-    padding: 1.125rem 2rem;
-    font-size: 1.125rem;
-    font-weight: 700;
-    border-radius: 0.875rem;
-    background: #25d366;
-    color: white;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    box-shadow: 0 12px 25px -4px rgba(37, 211, 102, 0.4);
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-.btn-whatsapp:hover {
-    background: #22c55e;
-    transform: translateY(-2px);
-    box-shadow: 0 16px 30px -4px rgba(37, 211, 102, 0.55);
-}
-
-/* ==================== FITUR: TOMBOL SOSIAL BULAT ==================== */
-.social-circle-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border-color);
-}
-.social-circle-btn {
-    width: 3.25rem;
-    height: 3.25rem;
-    border-radius: 50%;
-    background: var(--bg-card-alt);
-    border: 1px solid var(--border-color);
-    color: var(--text-main);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.35rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-.social-circle-btn:hover {
-    transform: translateY(-4px) scale(1.08);
-}
-.social-circle-btn.email:hover {
-    background: #ea4335;
-    color: #ffffff;
-    border-color: #ea4335;
-    box-shadow: 0 8px 20px rgba(234, 67, 53, 0.4);
-}
-.social-circle-btn.github:hover {
-    background: #24292e;
-    color: #ffffff;
-    border-color: #24292e;
-    box-shadow: 0 8px 20px rgba(36, 41, 46, 0.4);
-}
-.social-circle-btn.linkedin:hover {
-    background: #0077b5;
-    color: #ffffff;
-    border-color: #0077b5;
-    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
-}
-.social-circle-btn.instagram:hover {
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    color: #ffffff;
-    border-color: transparent;
-    box-shadow: 0 8px 20px rgba(214, 36, 159, 0.4);
-}
-.social-circle-btn.tiktok:hover {
-    background: #000000;
-    color: #ffffff;
-    border-color: #000000;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-html.dark .social-circle-btn.tiktok:hover {
-    background: #111111;
-    border-color: #333333;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-}
-
-.project-bullet-list {
-    margin: 0.75rem 0 0;
-    padding-left: 1.125rem;
-    list-style-type: disc;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-.project-bullet-list li {
-    font-size: 0.825rem;
-    color: var(--text-light);
-    line-height: 1.55;
-}
-
-/* ==================== FITUR: FOOTER ==================== */
-footer { padding: 2rem 0; background: var(--bg-card); border-top: 1px solid var(--border-color); }
-.footer-inner { position: relative; display: flex; align-items: center; justify-content: center; gap: 1rem; text-align: center; }
-.footer-inner p { margin: 0; }
-.footer-inner .btn-icon { position: absolute; right: 0; }
-@media (max-width: 640px) {
-    .footer-inner { flex-direction: column; }
-    .footer-inner .btn-icon { position: static; }
-}
-
-/* ==================== FITUR: NOTIFIKASI TOAST ==================== */
-.toast { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 1000; display: none; align-items: center; gap: 0.75rem; padding: 1rem 1.25rem; border-radius: 1rem; background: white; color: #0f172a; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; }
-html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
-.toast.show { display: flex; animation: slideUp 0.3s ease; }
-@keyframes slideUp { from { opacity: 0; transform: translateY(1rem); } to { opacity: 1; transform: translateY(0); } }
-
-/* ==================== FITUR: SCROLL REVEAL ANIMASI ==================== */
-
-.scroll-text-anim { opacity: 0; transform: translateY(32px) scale(0.98); filter: blur(6px); transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform, filter; }
-.scroll-text-anim.is-visible { opacity: 1; transform: translateY(0) scale(1); filter: blur(0px); }
-    </style>
+    <!-- Stylesheet Eksternal Terpisah -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ==================== FITUR 1: NAVBAR (NAVIGASI ATAS) ==================== -->
-    <!-- Menampilkan logo identitas dan tautan menu utama (Tombol hamburger telah dihapus sesuai foto) -->
+    <!-- ==================== 1. NAVBAR ==================== -->
     <header id="navbar" class="navbar glass-nav">
         <div class="container nav-inner">
-            <!-- Logo Nama -->
             <a href="#home" class="logo brand-gradient font-heading">
                 Web<span style="color: var(--primary-text);">Porto</span>
             </a>
 
-            <!-- Menu Navigasi Utama -->
             <nav class="desktop-menu">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#about" class="nav-link">About</a>
@@ -553,7 +32,6 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 <a href="#contact" class="nav-link">Contact</a>
             </nav>
 
-            <!-- Aksi: Tombol Ganti Tema (Dark / Light Mode) -->
             <div style="display: flex; align-items: center; gap: 0.5rem;">
                 <button id="theme-toggle" class="btn-icon" aria-label="Ganti Tema">
                     <i id="theme-icon" class="fa-solid fa-moon"></i>
@@ -562,8 +40,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
         </div>
     </header>
 
-    <!-- ==================== FITUR 2: HERO / BANNER UTAMA ==================== -->
-    <!-- Menampilkan perkenalan diri, nama Saepul Anwar, deskripsi CV, dan foto profil -->
+    <!-- ==================== 2. HERO SECTION ==================== -->
     <section id="home" class="hero">
         <div class="blob-1"></div>
         <div class="blob-2"></div>
@@ -575,11 +52,12 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 </h1>
 
                 <!-- Ringkasan Profil dari CV -->
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.7;">
+                <p class="hero-desc scroll-text-anim" style="transition-delay: 200ms;">
                     Lulusan SMK jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong> yang memiliki motivasi besar untuk berkarier di industri teknologi. Terbiasa membangun aplikasi web fungsional serta mengelola struktur data yang rapi lewat serangkaian proyek praktis. Siap belajar cepat mengikuti standar alur kerja profesional untuk memberikan kontribusi nyata.
                 </p>
-                <!-- Tombol Navigasi Proyek & Kontak -->
-                <div class="btn-group scroll-text-anim" style="transition-delay: 400ms;">
+
+                <!-- Tombol Aksi -->
+                <div class="btn-group scroll-text-anim" style="transition-delay: 300ms;">
                     <a href="#project" class="btn btn-primary">
                         <span>Lihat Pengalaman Projek</span>
                         <i class="fa-solid fa-arrow-right"></i>
@@ -591,7 +69,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 </div>
             </div>
 
-            <!-- Bingkai Foto Profil Modern Bersudut Lengkung (Bersih Tanpa Atribut) -->
+            <!-- Bingkai Foto Profil (Sesuai CV) -->
             <div class="profile-container scroll-text-anim" style="transition-delay: 250ms;">
                 <div class="profile-frame">
                     <div class="profile-frame-inner">
@@ -602,8 +80,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
         </div>
     </section>
 
-    <!-- ==================== FITUR 3: TENTANG SAYA, PENDIDIKAN & KEMAMPUAN ==================== -->
-    <!-- Menampilkan ringkasan karakter kerja, timeline riwayat pendidikan, dan keahlian teknis -->
+    <!-- ==================== 3. TENTANG SAYA, PENDIDIKAN & KEMAMPUAN ==================== -->
     <section id="about" class="section-padding bg-alt">
         <div class="container">
             <div class="section-header scroll-text-anim">
@@ -612,28 +89,29 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 <div class="divider"></div>
             </div>
 
-            <!-- Baris 1: Ringkasan Profil & Riwayat Pendidikan (Sesuai CV) -->
+            <!-- Baris 1: Ringkasan Profil & Pendidikan -->
             <div class="grid-12" style="margin-bottom: 2.5rem;">
+                
                 <!-- Ringkasan Profil -->
                 <div class="col-6 scroll-text-anim" style="transition-delay: 100ms;">
-                    <div class="card h-100" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="card h-100">
                         <div>
-                            <h3 class="card-header font-heading" style="margin-bottom: 1rem;">
+                            <h3 class="card-header font-heading">
                                 <i class="fa-solid fa-id-card" style="color: var(--primary);"></i> Ringkasan Profil
                             </h3>
                             <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-light);">
                                 Saya adalah lulusan SMK jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong> yang memiliki motivasi besar untuk berkarier di industri teknologi. Terbiasa membangun aplikasi web fungsional serta mengelola struktur data yang rapi lewat serangkaian proyek praktis. Merupakan pribadi yang adaptif, bertanggung jawab terhadap tugas, dan berorientasi pada kerja sama tim, saya siap belajar cepat mengikuti standar alur kerja profesional untuk memberikan kontribusi nyata.
                             </p>
                         </div>
-                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
-                            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                        <div class="profile-stats-grid">
+                            <div class="stat-item">
                                 <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-code"></i></div>
                                 <div>
                                     <p style="font-size: 0.75rem; color: var(--text-muted);">Jurusan / Fokus</p>
                                     <p style="font-size: 0.875rem; font-weight: 600;">Rekayasa Perangkat Lunak</p>
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 0.75rem; align-items: center;">
+                            <div class="stat-item">
                                 <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <p style="font-size: 0.75rem; color: var(--text-muted);">Domisili</p>
@@ -644,20 +122,19 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                     </div>
                 </div>
 
-                <!-- Riwayat Pendidikan & Sertifikasi (Sesuai CV) -->
+                <!-- Pendidikan & Sertifikasi (Sesuai CV) -->
                 <div class="col-6 scroll-text-anim" style="transition-delay: 200ms;">
-                    <div class="card h-100" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="card h-100">
                         <div>
-                            <h3 class="card-header font-heading" style="margin-bottom: 1rem;">
+                            <h3 class="card-header font-heading">
                                 <i class="fa-solid fa-graduation-cap" style="color: var(--primary);"></i> Pendidikan &amp; Sertifikasi
                             </h3>
                             <div class="timeline">
-                                <!-- 1. SMK Negeri 1 Kawali (2024-2027) -->
                                 <div class="timeline-item">
                                     <div class="timeline-dot" style="background: #4f46e5;"></div>
                                     <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                        <div style="width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0.35rem;">
-                                            <img src="logo-smkn1kawali.png" alt="Logo SMKN 1 Kawali" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                        <div class="school-logo-box">
+                                            <img src="logo-smkn1kawali.png" alt="Logo SMKN 1 Kawali">
                                         </div>
                                         <div>
                                             <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary-text); margin-bottom: 0.25rem;">2024 - 2027</span>
@@ -669,9 +146,9 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                             </div>
                         </div>
 
-                        <!-- Sertifikasi UKK dari CV -->
-                        <div style="margin-top: 1.5rem; padding: 1.125rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid rgba(251, 191, 36, 0.4); display: flex; align-items: flex-start; gap: 0.875rem;">
-                            <div class="icon-box" style="background: rgba(251, 191, 36, 0.15); color: #f59e0b; flex-shrink: 0;">
+                        <!-- Sertifikasi UKK -->
+                        <div class="cert-card">
+                            <div class="icon-box" style="background: rgba(251, 191, 36, 0.15); color: #f59e0b;">
                                 <i class="fa-solid fa-award"></i>
                             </div>
                             <div>
@@ -687,9 +164,9 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 </div>
             </div>
 
-            <!-- Baris 2: Kemampuan (Hard Skill & Soft Skill Sesuai CV) -->
+            <!-- Baris 2: Kemampuan (Hard Skill & Soft Skill) -->
             <div class="grid-12">
-                <!-- Hard Skill Sesuai CV -->
+                <!-- Hard Skill -->
                 <div class="col-7 scroll-text-anim" style="transition-delay: 100ms;">
                     <div class="card h-100">
                         <div class="card-header font-heading">
@@ -700,13 +177,13 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                             </div>
                         </div>
                         <div class="skills-grid">
-                            <!-- 1. HTML, CSS, JS (BASIC) -->
+                            <!-- 1. HTML, CSS, JS -->
                             <div class="skill-item">
                                 <div class="skill-item-header">
                                     <div style="display: flex; gap: 0.35rem; align-items: center;">
-                                        <div class="icon-box" style="background: rgba(249, 115, 22, 0.1); color: #f97316; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="HTML5"><i class="fa-brands fa-html5"></i></div>
-                                        <div class="icon-box" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
-                                        <div class="icon-box" style="background: rgba(234, 179, 8, 0.1); color: #eab308; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+                                        <div class="icon-box" style="background: rgba(249, 115, 22, 0.1); color: #f97316; width: 2.25rem; height: 2.25rem; font-size: 1rem;"><i class="fa-brands fa-html5"></i></div>
+                                        <div class="icon-box" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; width: 2.25rem; height: 2.25rem; font-size: 1rem;"><i class="fa-brands fa-css3-alt"></i></div>
+                                        <div class="icon-box" style="background: rgba(234, 179, 8, 0.1); color: #eab308; width: 2.25rem; height: 2.25rem; font-size: 1rem;"><i class="fa-brands fa-js"></i></div>
                                     </div>
                                     <div>
                                         <span style="font-weight: 700; font-size: 0.875rem;">HTML, CSS, JS</span>
@@ -716,12 +193,12 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 <p style="font-size: 0.75rem; color: var(--text-light);">Dasar penataan struktur web, styling antarmuka responsif, dan interaktivitas.</p>
                             </div>
 
-                            <!-- 2. PHP, LARAVEL (BASIC) -->
+                            <!-- 2. PHP, LARAVEL -->
                             <div class="skill-item">
                                 <div class="skill-item-header">
                                     <div style="display: flex; gap: 0.35rem; align-items: center;">
-                                        <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary); width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="PHP"><i class="fa-brands fa-php"></i></div>
-                                        <div class="icon-box" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="Laravel"><i class="fa-brands fa-laravel"></i></div>
+                                        <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary); width: 2.25rem; height: 2.25rem; font-size: 1rem;"><i class="fa-brands fa-php"></i></div>
+                                        <div class="icon-box" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; width: 2.25rem; height: 2.25rem; font-size: 1rem;"><i class="fa-brands fa-laravel"></i></div>
                                     </div>
                                     <div>
                                         <span style="font-weight: 700; font-size: 0.875rem;">PHP, LARAVEL</span>
@@ -731,12 +208,10 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 <p style="font-size: 0.75rem; color: var(--text-light);">Logika backend web dinamis, arsitektur MVC, CRUD, dan autentikasi.</p>
                             </div>
 
-                            <!-- 3. MYSQL (BASIC) -->
+                            <!-- 3. MYSQL -->
                             <div class="skill-item">
                                 <div class="skill-item-header">
-                                    <div style="display: flex; gap: 0.35rem; align-items: center;">
-                                        <div class="icon-box" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="MySQL"><i class="fa-solid fa-database"></i></div>
-                                    </div>
+                                    <div class="icon-box" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9; width: 2.25rem; height: 2.25rem; font-size: 1rem;"><i class="fa-solid fa-database"></i></div>
                                     <div>
                                         <span style="font-weight: 700; font-size: 0.875rem;">MYSQL</span>
                                         <span class="badge" style="background: var(--primary-light); color: var(--primary-text); margin-left: 0.25rem; font-size: 0.65rem;">BASIC</span>
@@ -748,17 +223,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                             <!-- 4. FIGMA -->
                             <div class="skill-item">
                                 <div class="skill-item-header">
-                                    <div style="display: flex; gap: 0.35rem; align-items: center;">
-                                        <div class="icon-box" style="background: rgba(168, 85, 247, 0.1); color: #a855f7; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="Figma">
-                                            <svg width="14" height="20" viewBox="0 0 38 57" fill="none">
-                                                <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
-                                                <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
-                                                <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
-                                                <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
-                                                <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
-                                            </svg>
-                                        </div>
-                                    </div>
+                                    <div class="icon-box" style="background: rgba(168, 85, 247, 0.1); color: #a855f7; width: 2.25rem; height: 2.25rem; font-size: 1.15rem;"><i class="fa-brands fa-figma"></i></div>
                                     <div>
                                         <span style="font-weight: 700; font-size: 0.875rem;">FIGMA</span>
                                     </div>
@@ -769,9 +234,9 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                     </div>
                 </div>
 
-                <!-- Soft Skill Sesuai CV -->
+                <!-- Soft Skill -->
                 <div class="col-5 scroll-text-anim" style="transition-delay: 200ms;">
-                    <div class="card card-alt h-100" style="display: flex; flex-direction: column;">
+                    <div class="card card-alt h-100">
                         <div class="card-header font-heading">
                             <div class="icon-box" style="background: #7c3aed; color: white;"><i class="fa-solid fa-people-group"></i></div>
                             <div>
@@ -780,8 +245,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                             </div>
                         </div>
                         
-                        <div class="soft-skill-list" style="flex: 1;">
-                            <!-- 1. Pemecahan Masalah (Problem Solving) -->
+                        <div class="soft-skill-list">
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-puzzle-piece"></i></div>
                                 <div>
@@ -790,7 +254,6 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 </div>
                             </div>
 
-                            <!-- 2. Kerja Sama Tim (Teamwork) -->
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="fa-solid fa-handshake-angle"></i></div>
                                 <div>
@@ -799,7 +262,6 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 </div>
                             </div>
 
-                            <!-- 3. Kemampuan Beradaptasi (Adaptability) -->
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;"><i class="fa-solid fa-arrows-rotate"></i></div>
                                 <div>
@@ -808,7 +270,6 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 </div>
                             </div>
 
-                            <!-- 4. Manajemen Waktu (Time Management) -->
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><i class="fa-solid fa-clock"></i></div>
                                 <div>
@@ -823,8 +284,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
         </div>
     </section>
 
-    <!-- ==================== FITUR 5: PENGALAMAN PROJEK ==================== -->
-    <!-- Menampilkan karya projek berdasarkan CV (Web Pemesanan Makanan & Company Profile) -->
+    <!-- ==================== 4. PENGALAMAN PROJEK ==================== -->
     <section id="project" class="section-padding">
         <div class="container">
             <div class="section-header scroll-text-anim">
@@ -835,7 +295,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
 
             <div class="project-grid">
                 
-                <!-- Projek 1: Website Company Profile (Agustus – September 2026) -->
+                <!-- Projek 1: Company Profile -->
                 <article class="project-card scroll-text-anim" style="transition-delay: 100ms;">
                     <div class="project-img-wrapper">
                         <img src="company-profile.jpg" alt="Pembuatan Website Company Profile" class="project-img">
@@ -857,7 +317,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                     </div>
                 </article>
 
-                <!-- Projek 2: Pengembangan Website Pencatatan Keuangan / Tabungan (2026) -->
+                <!-- Projek 2: Pencatatan Keuangan / Tabungan -->
                 <article class="project-card scroll-text-anim" style="transition-delay: 200ms;">
                     <div class="project-img-wrapper">
                         <img src="web-tabungan.png" alt="Pengembangan Website Pencatatan Keuangan / Tabungan" class="project-img">
@@ -878,7 +338,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                     </div>
                 </article>
 
-                <!-- Projek 3: Pengembangan Website Pemesanan Makanan (April 2025) -->
+                <!-- Projek 3: Pemesanan Makanan -->
                 <article class="project-card scroll-text-anim" style="transition-delay: 300ms;">
                     <div class="project-img-wrapper">
                         <img src="pemesanan-makanan.jpg" alt="Pengembangan Website Pemesanan Makanan" class="project-img">
@@ -904,8 +364,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
         </div>
     </section>
 
-    <!-- ==================== FITUR 6: KONTAK ==================== -->
-    <!-- Menampilkan kontak langsung Saepul Anwar sesuai CV (Tanpa Peta Lokasi) -->
+    <!-- ==================== 5. KONTAK ==================== -->
     <section id="contact" class="section-padding bg-alt">
         <div class="container">
             <div class="section-header scroll-text-anim">
@@ -917,12 +376,11 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 </p>
             </div>
 
-            <!-- Kartu Kontak Sesuai CV (Tanpa Peta Lokasi) -->
-            <div class="scroll-text-anim" style="max-width: 44rem; margin: 0 auto;">
-                <div class="card" style="padding: 2.25rem 2rem;">
-                    
+            <!-- Kartu Kontak Sesuai CV -->
+            <div class="contact-container scroll-text-anim">
+                <div class="card contact-card">
                     <!-- Alamat Domisili Sesuai CV -->
-                    <div class="contact-info-card" style="margin-bottom: 1.5rem;">
+                    <div class="contact-info-card">
                         <div class="contact-info-icon" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
@@ -932,13 +390,13 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                         </div>
                     </div>
 
-                    <!-- Tombol Hijau Besar WhatsApp Saja -->
+                    <!-- Tombol Utama WhatsApp -->
                     <a href="https://wa.me/6281214960561?text=Halo%20Saepul%20Anwar,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek%20atau%20peluang%20kerja." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                         <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
                         <span>Hubungi via WhatsApp (081214960561)</span>
                     </a>
 
-                    <!-- Fitur Tombol Bulat: GitHub, LinkedIn, Email, Instagram, TikTok Sesuai CV -->
+                    <!-- Tombol Bulat Media Sosial Sesuai CV -->
                     <div class="social-circle-group">
                         <a href="https://github.com/SaepulAnwar348" target="_blank" rel="noopener noreferrer" class="social-circle-btn github" title="GitHub SaepulAnwar348" aria-label="GitHub">
                             <i class="fa-brands fa-github"></i>
@@ -961,94 +419,15 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
         </div>
     </section>
 
-    <!-- ==================== FITUR 7: FOOTER ==================== -->
-    <!-- Bagian penutup halaman dan navigasi kembali ke atas -->
+    <!-- ==================== 6. FOOTER ==================== -->
     <footer>
         <div class="container footer-inner">
-            <p style="font-size: 0.875rem; color: var(--text-light); text-align: center;">&copy; 2026 Saepul Anwar. All rights reserved.</p>
-            
+            <p style="font-size: 0.875rem; color: var(--text-light);">&copy; 2026 Saepul Anwar. All rights reserved.</p>
             <a href="#home" class="btn-icon" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></a>
         </div>
     </footer>
 
-    <!-- ==================== FITUR 8: NOTIFIKASI TOAST ==================== -->
-    <div id="toast" class="toast">
-        <i class="fa-solid fa-circle-check" style="color: #10b981; font-size: 1.25rem;"></i>
-        <div>
-            <p id="toast-title" style="font-weight: 700; font-size: 0.875rem;">Berhasil!</p>
-            <p id="toast-msg" style="font-size: 0.75rem; opacity: 0.8;">Pesan terkirim.</p>
-        </div>
-    </div>
-
-    <!-- ==================== FITUR JAVASCRIPT: LOGIKA & INTERAKSI (DISATUKAN DENGAN HTML) ==================== -->
-    <script>
-// ==========================================================================
-// FITUR JAVASCRIPT: LOGIKA & INTERAKSI WEB PORTOFOLIO
-// Saepul Anwar - Junior Web Developer
-// ==========================================================================
-
-// --- 1. Fitur Ganti Tema (Dark / Light Mode) ---
-const html = document.documentElement;
-const themeBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-
-// Membaca pengaturan tema yang tersimpan di browser (Local Storage)
-if (localStorage.getItem('theme') === 'light') {
-    html.classList.remove('dark');
-    themeIcon.className = 'fa-solid fa-sun';
-}
-
-themeBtn.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    const isDark = html.classList.contains('dark');
-    themeIcon.className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
-
-// --- 2. Fitur Animasi Muncul Saat Scroll (Intersection Observer) ---
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-        } else {
-            entry.target.classList.remove('is-visible');
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-document.querySelectorAll('.scroll-text-anim').forEach(el => observer.observe(el));
-
-// --- 3. Fitur Active Nav Link Saat Scroll ---
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.desktop-menu .nav-link');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollY = window.pageYOffset;
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
-        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// --- 4. Fitur Notifikasi Toast ---
-function showToast(title, msg) {
-    document.getElementById('toast-title').textContent = title;
-    document.getElementById('toast-msg').textContent = msg;
-    const toast = document.getElementById('toast');
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3500);
-}
-    </script>
+    <!-- JavaScript Eksternal Terpisah -->
+    <script src="script.js"></script>
 </body>
 </html>
