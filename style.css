@@ -194,54 +194,54 @@ html.dark .btn-icon:hover { filter: brightness(1.2); }
     }
 }
 
-/* Frame Foto Modern dengan Bingkai Berkelas */
+/* Frame Foto Sesuai Foto CV (Bingkai Persegi Emas Elegan) */
 .profile-frame {
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 18.5rem;
-    height: 23.5rem;
-    border-radius: 2rem;
-    padding: 0.875rem;
+    max-width: 18rem;
+    height: 23rem;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
     background: var(--bg-card);
-    border: 2px solid #6366f1;
+    border: 3px solid #fbbf24;
     box-shadow: 
-        0 0 30px -5px rgba(99, 102, 241, 0.35),
+        0 0 25px -5px rgba(251, 191, 36, 0.35),
         0 20px 45px -15px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 @media (min-width: 640px) {
     .profile-frame {
-        max-width: 20.5rem;
-        height: 25.5rem;
-        padding: 1rem;
+        max-width: 19.5rem;
+        height: 24.5rem;
+        padding: 0.75rem;
     }
 }
 
 html:not(.dark) .profile-frame {
     background: #ffffff;
-    border: 2px solid #4f46e5;
+    border: 3px solid #f59e0b;
     box-shadow: 
-        0 0 25px -5px rgba(79, 70, 229, 0.2),
+        0 0 25px -5px rgba(245, 158, 11, 0.25),
         0 20px 40px -15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-frame:hover {
     transform: translateY(-6px);
-    border-color: #818cf8;
+    border-color: #fde047;
     box-shadow: 
-        0 0 45px -5px rgba(99, 102, 241, 0.5),
+        0 0 40px -5px rgba(251, 191, 36, 0.55),
         0 25px 50px -15px rgba(0, 0, 0, 0.6);
 }
 
 .profile-frame-inner {
     width: 100%;
     height: 100%;
-    border-radius: 1.35rem;
+    border-radius: 0.875rem;
     overflow: hidden;
     position: relative;
     background: #0f172a;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(251, 191, 36, 0.25);
 }
 
 html:not(.dark) .profile-frame-inner {
@@ -396,6 +396,18 @@ html:not(.dark) .profile-frame-inner {
     border-color: #ea4335;
     box-shadow: 0 8px 20px rgba(234, 67, 53, 0.4);
 }
+.social-circle-btn.github:hover {
+    background: #24292e;
+    color: #ffffff;
+    border-color: #24292e;
+    box-shadow: 0 8px 20px rgba(36, 41, 46, 0.4);
+}
+.social-circle-btn.linkedin:hover {
+    background: #0077b5;
+    color: #ffffff;
+    border-color: #0077b5;
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+}
 .social-circle-btn.instagram:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     color: #ffffff;
@@ -412,6 +424,20 @@ html.dark .social-circle-btn.tiktok:hover {
     background: #111111;
     border-color: #333333;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.project-bullet-list {
+    margin: 0.75rem 0 0;
+    padding-left: 1.125rem;
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.project-bullet-list li {
+    font-size: 0.825rem;
+    color: var(--text-light);
+    line-height: 1.55;
 }
 
 /* ==================== FITUR: FOOTER ==================== */

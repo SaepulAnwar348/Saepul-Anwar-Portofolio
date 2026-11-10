@@ -212,54 +212,54 @@ html.dark .btn-icon:hover { filter: brightness(1.2); }
     }
 }
 
-/* Frame Foto Modern dengan Bingkai Berkelas */
+/* Frame Foto Sesuai Foto CV (Bingkai Persegi Emas Elegan) */
 .profile-frame {
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 18.5rem;
-    height: 23.5rem;
-    border-radius: 2rem;
-    padding: 0.875rem;
+    max-width: 18rem;
+    height: 23rem;
+    border-radius: 1.25rem;
+    padding: 0.625rem;
     background: var(--bg-card);
-    border: 2px solid #6366f1;
+    border: 3px solid #fbbf24;
     box-shadow: 
-        0 0 30px -5px rgba(99, 102, 241, 0.35),
+        0 0 25px -5px rgba(251, 191, 36, 0.35),
         0 20px 45px -15px rgba(0, 0, 0, 0.5);
     transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 @media (min-width: 640px) {
     .profile-frame {
-        max-width: 20.5rem;
-        height: 25.5rem;
-        padding: 1rem;
+        max-width: 19.5rem;
+        height: 24.5rem;
+        padding: 0.75rem;
     }
 }
 
 html:not(.dark) .profile-frame {
     background: #ffffff;
-    border: 2px solid #4f46e5;
+    border: 3px solid #f59e0b;
     box-shadow: 
-        0 0 25px -5px rgba(79, 70, 229, 0.2),
+        0 0 25px -5px rgba(245, 158, 11, 0.25),
         0 20px 40px -15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-frame:hover {
     transform: translateY(-6px);
-    border-color: #818cf8;
+    border-color: #fde047;
     box-shadow: 
-        0 0 45px -5px rgba(99, 102, 241, 0.5),
+        0 0 40px -5px rgba(251, 191, 36, 0.55),
         0 25px 50px -15px rgba(0, 0, 0, 0.6);
 }
 
 .profile-frame-inner {
     width: 100%;
     height: 100%;
-    border-radius: 1.35rem;
+    border-radius: 0.875rem;
     overflow: hidden;
     position: relative;
     background: #0f172a;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(251, 191, 36, 0.25);
 }
 
 html:not(.dark) .profile-frame-inner {
@@ -414,6 +414,18 @@ html:not(.dark) .profile-frame-inner {
     border-color: #ea4335;
     box-shadow: 0 8px 20px rgba(234, 67, 53, 0.4);
 }
+.social-circle-btn.github:hover {
+    background: #24292e;
+    color: #ffffff;
+    border-color: #24292e;
+    box-shadow: 0 8px 20px rgba(36, 41, 46, 0.4);
+}
+.social-circle-btn.linkedin:hover {
+    background: #0077b5;
+    color: #ffffff;
+    border-color: #0077b5;
+    box-shadow: 0 8px 20px rgba(0, 119, 181, 0.4);
+}
 .social-circle-btn.instagram:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     color: #ffffff;
@@ -430,6 +442,20 @@ html.dark .social-circle-btn.tiktok:hover {
     background: #111111;
     border-color: #333333;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+.project-bullet-list {
+    margin: 0.75rem 0 0;
+    padding-left: 1.125rem;
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+.project-bullet-list li {
+    font-size: 0.825rem;
+    color: var(--text-light);
+    line-height: 1.55;
 }
 
 /* ==================== FITUR: FOOTER ==================== */
@@ -495,9 +521,9 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 </h1>
 
                 <!-- Ringkasan Profil dari CV -->
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem;">
-                            Saya adalah <strong>Saepul Anwar</strong>, seorang <strong>Junior Web Developer</strong> dengan fokus pada pengembangan aplikasi web fungsional dan responsif. Berpengalaman dalam membangun antarmuka web adaptif menggunakan <strong>Bootstrap</strong> serta operasi <strong>CRUD</strong>, autentikasi dasar, dan integrasi database menggunakan PHP, Laravel, dan MySQL.
-                        </p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.7;">
+                    Lulusan SMK jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong> yang memiliki motivasi besar untuk berkarier di industri teknologi. Terbiasa membangun aplikasi web fungsional serta mengelola struktur data yang rapi lewat serangkaian proyek praktis. Siap belajar cepat mengikuti standar alur kerja profesional untuk memberikan kontribusi nyata.
+                </p>
                 <!-- Tombol Navigasi Proyek & Kontak -->
                 <div class="btn-group scroll-text-anim" style="transition-delay: 400ms;">
                     <a href="#project" class="btn btn-primary">
@@ -532,7 +558,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                 <div class="divider"></div>
             </div>
 
-            <!-- Baris 1: Ringkasan Profil & Riwayat Pendidikan -->
+            <!-- Baris 1: Ringkasan Profil & Riwayat Pendidikan (Sesuai CV) -->
             <div class="grid-12" style="margin-bottom: 2.5rem;">
                 <!-- Ringkasan Profil -->
                 <div class="col-6 scroll-text-anim" style="transition-delay: 100ms;">
@@ -542,270 +568,198 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 <i class="fa-solid fa-id-card" style="color: var(--primary);"></i> Ringkasan Profil
                             </h3>
                             <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-light);">
-                                Seorang <strong>Junior Web Developer</strong> dengan fokus pada pengembangan aplikasi web fungsional dan responsif. Berpengalaman membangun antarmuka web adaptif menggunakan <strong>Bootstrap</strong> serta mengimplementasikan operasi <strong>CRUD</strong>, autentikasi dasar, dan integrasi database menggunakan <strong>PHP, framework Laravel,</strong> dan <strong>MySQL</strong>.
+                                Saya adalah lulusan SMK jurusan <strong>Rekayasa Perangkat Lunak (RPL)</strong> yang memiliki motivasi besar untuk berkarier di industri teknologi. Terbiasa membangun aplikasi web fungsional serta mengelola struktur data yang rapi lewat serangkaian proyek praktis. Merupakan pribadi yang adaptif, bertanggung jawab terhadap tugas, dan berorientasi pada kerja sama tim, saya siap belajar cepat mengikuti standar alur kerja profesional untuk memberikan kontribusi nyata.
                             </p>
                         </div>
                         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
                             <div style="display: flex; gap: 0.75rem; align-items: center;">
-                                <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-user-tie"></i></div>
+                                <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-code"></i></div>
                                 <div>
-                                    <p style="font-size: 0.75rem; color: var(--text-muted);">Peran Utama</p>
-                                    <p style="font-size: 0.875rem; font-weight: 600;">Junior Web Dev</p>
+                                    <p style="font-size: 0.75rem; color: var(--text-muted);">Jurusan / Fokus</p>
+                                    <p style="font-size: 0.875rem; font-weight: 600;">Rekayasa Perangkat Lunak</p>
                                 </div>
                             </div>
                             <div style="display: flex; gap: 0.75rem; align-items: center;">
                                 <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-location-dot"></i></div>
                                 <div>
                                     <p style="font-size: 0.75rem; color: var(--text-muted);">Domisili</p>
-                                    <p style="font-size: 0.875rem; font-weight: 600;">Ciamis, Jabar</p>
+                                    <p style="font-size: 0.875rem; font-weight: 600;">Panjalu, Ciamis</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Riwayat Pendidikan -->
+                <!-- Riwayat Pendidikan & Sertifikasi (Sesuai CV) -->
                 <div class="col-6 scroll-text-anim" style="transition-delay: 200ms;">
-                    <div class="card h-100">
-                        <h3 class="card-header font-heading" style="margin-bottom: 1rem;">
-                            <i class="fa-solid fa-graduation-cap" style="color: var(--primary);"></i> Riwayat Pendidikan
-                        </h3>
-                        <div class="timeline">
-                            <!-- 1. SMK Negeri 1 Kawali (2024-2027) -->
-                            <div class="timeline-item">
-                                <div class="timeline-dot" style="background: #4f46e5;"></div>
-                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0.35rem;">
-                                        <img src="logo-smkn1kawali.png" alt="Logo SMKN 1 Kawali" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                    </div>
-                                    <div>
-                                        <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary-text); margin-bottom: 0.25rem;">2024 - 2027</span>
-                                        <h4 style="font-size: 1rem; font-weight: 700;" class="font-heading">SMK Negeri 1 Kawali</h4>
-                                        <p style="font-size: 0.875rem; color: var(--text-light);">Pendidikan Menengah Kejuruan</p>
-                                        <p style="font-size: 0.875rem; color: var(--text-light);">Rekayasa Perangkat Lunak (RPL)</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 2. SMP Negeri 1 Panjalu (2021-2024) -->
-                            <div class="timeline-item">
-                                <div class="timeline-dot" style="background: #64748b;"></div>
-                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0.35rem;">
-                                        <img src="logo-smpn1panjalu.png" alt="Logo SMPN 1 Panjalu" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                    </div>
-                                    <div>
-                                        <span class="badge" style="background: var(--bg-hover); color: var(--text-muted); margin-bottom: 0.25rem;">2021 - 2024</span>
-                                        <h4 style="font-size: 1rem; font-weight: 700;" class="font-heading">SMP Negeri 1 Panjalu</h4>
-                                        <p style="font-size: 0.875rem; color: var(--text-light);">Pendidikan Menengah Pertama</p>
+                    <div class="card h-100" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 class="card-header font-heading" style="margin-bottom: 1rem;">
+                                <i class="fa-solid fa-graduation-cap" style="color: var(--primary);"></i> Pendidikan &amp; Sertifikasi
+                            </h3>
+                            <div class="timeline">
+                                <!-- 1. SMK Negeri 1 Kawali (2024-2027) -->
+                                <div class="timeline-item">
+                                    <div class="timeline-dot" style="background: #4f46e5;"></div>
+                                    <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                        <div style="width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0.35rem;">
+                                            <img src="logo-smkn1kawali.png" alt="Logo SMKN 1 Kawali" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                                        </div>
+                                        <div>
+                                            <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary-text); margin-bottom: 0.25rem;">2024 - 2027</span>
+                                            <h4 style="font-size: 1rem; font-weight: 700;" class="font-heading">SMK NEGERI 1 KAWALI</h4>
+                                            <p style="font-size: 0.875rem; color: var(--text-light);">Pengembangan Perangkat Lunak (2024 - 2027)</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 3. MI Negeri 1 Ciamis (2015-2021) -->
-                            <div class="timeline-item">
-                                <div class="timeline-dot" style="background: #64748b;"></div>
-                                <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                    <div style="width: 3.5rem; height: 3.5rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 0.35rem;">
-                                        <img src="logo-min1ciamis.png" alt="Logo MI Negeri 1 Ciamis" style="max-width: 100%; max-height: 100%; object-fit: contain;">
-                                    </div>
-                                    <div>
-                                        <span class="badge" style="background: var(--bg-hover); color: var(--text-muted); margin-bottom: 0.25rem;">2015 - 2021</span>
-                                        <h4 style="font-size: 1rem; font-weight: 700;" class="font-heading">MI Negeri 1 Ciamis</h4>
-                                        <p style="font-size: 0.875rem; color: var(--text-light);">Pendidikan Dasar</p>
-                                    </div>
+                        </div>
+
+                        <!-- Sertifikasi UKK dari CV -->
+                        <div style="margin-top: 1.5rem; padding: 1.125rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid rgba(251, 191, 36, 0.4); display: flex; align-items: flex-start; gap: 0.875rem;">
+                            <div class="icon-box" style="background: rgba(251, 191, 36, 0.15); color: #f59e0b; flex-shrink: 0;">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;">
+                                    <span class="badge" style="background: rgba(251, 191, 36, 0.2); color: #d97706;">Sertifikasi Keahlian</span>
+                                    <span style="font-size: 0.75rem; color: var(--text-light); font-weight: 600;">September 2026</span>
                                 </div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-main);" class="font-heading">Uji Kompetensi Keahlian (UKK)</h4>
+                                <p style="font-size: 0.8125rem; color: var(--text-light);">Rekayasa Perangkat Lunak (RPL)</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Baris 2: Keahlian Teknis & Soft Skills -->
+            <!-- Baris 2: Kemampuan (Hard Skill & Soft Skill Sesuai CV) -->
             <div class="grid-12">
-                <div class="col-7" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    <!-- Hard Skills Teknis -->
-                    <div class="card scroll-text-anim" style="transition-delay: 100ms;">
+                <!-- Hard Skill Sesuai CV -->
+                <div class="col-7 scroll-text-anim" style="transition-delay: 100ms;">
+                    <div class="card h-100">
                         <div class="card-header font-heading">
                             <div class="icon-box" style="background: var(--primary); color: white;"><i class="fa-solid fa-laptop-code"></i></div>
                             <div>
-                                <div style="font-size: 1.25rem;">Hard Skills (Teknis)</div>
-                                <div style="font-size: 0.75rem; color: var(--text-light); font-weight: 400;">Pemrograman &amp; Database</div>
+                                <div style="font-size: 1.25rem;">Hard Skill</div>
+                                <div style="font-size: 0.75rem; color: var(--text-light); font-weight: 400;">Keahlian Teknis Pemrograman &amp; Desain</div>
                             </div>
                         </div>
                         <div class="skills-grid">
+                            <!-- 1. HTML, CSS, JS (BASIC) -->
                             <div class="skill-item">
-                                <div class="skill-item-header" style="flex-wrap: wrap; gap: 0.5rem;">
+                                <div class="skill-item-header">
                                     <div style="display: flex; gap: 0.35rem; align-items: center;">
                                         <div class="icon-box" style="background: rgba(249, 115, 22, 0.1); color: #f97316; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="HTML5"><i class="fa-brands fa-html5"></i></div>
                                         <div class="icon-box" style="background: rgba(37, 99, 235, 0.1); color: #2563eb; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
                                         <div class="icon-box" style="background: rgba(234, 179, 8, 0.1); color: #eab308; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="JavaScript"><i class="fa-brands fa-js"></i></div>
                                     </div>
-                                    <span style="font-weight: 700; font-size: 0.875rem;">HTML, CSS &amp; JavaScript</span>
-                                </div>
-                                <p style="font-size: 0.75rem; color: var(--text-light);">Penyusunan struktur halaman web, penataan antarmuka responsif, dan interaktivitas modern.</p>
-                            </div>
-                            <div class="skill-item">
-                                <div class="skill-item-header" style="flex-wrap: wrap; gap: 0.5rem;">
-                                    <div style="display: flex; gap: 0.35rem; align-items: center;">
-                                        <div class="icon-box" style="background: rgba(168, 85, 247, 0.1); color: #a855f7; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="Bootstrap"><i class="fa-brands fa-bootstrap"></i></div>
+                                    <div>
+                                        <span style="font-weight: 700; font-size: 0.875rem;">HTML, CSS, JS</span>
+                                        <span class="badge" style="background: var(--primary-light); color: var(--primary-text); margin-left: 0.25rem; font-size: 0.65rem;">BASIC</span>
                                     </div>
-                                    <span style="font-weight: 700; font-size: 0.875rem;">Bootstrap</span>
                                 </div>
-                                <p style="font-size: 0.75rem; color: var(--text-light);">Pembuatan antarmuka adaptif dan komponen UI modern.</p>
+                                <p style="font-size: 0.75rem; color: var(--text-light);">Dasar penataan struktur web, styling antarmuka responsif, dan interaktivitas.</p>
                             </div>
+
+                            <!-- 2. PHP, LARAVEL (BASIC) -->
                             <div class="skill-item">
-                                <div class="skill-item-header" style="flex-wrap: wrap; gap: 0.5rem;">
+                                <div class="skill-item-header">
                                     <div style="display: flex; gap: 0.35rem; align-items: center;">
                                         <div class="icon-box" style="background: rgba(99, 102, 241, 0.1); color: var(--primary); width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="PHP"><i class="fa-brands fa-php"></i></div>
                                         <div class="icon-box" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="Laravel"><i class="fa-brands fa-laravel"></i></div>
                                     </div>
-                                    <span style="font-weight: 700; font-size: 0.875rem;">PHP &amp; Laravel</span>
+                                    <div>
+                                        <span style="font-weight: 700; font-size: 0.875rem;">PHP, LARAVEL</span>
+                                        <span class="badge" style="background: var(--primary-light); color: var(--primary-text); margin-left: 0.25rem; font-size: 0.65rem;">BASIC</span>
+                                    </div>
                                 </div>
-                                <p style="font-size: 0.75rem; color: var(--text-light);">Logika server, MVC, routing, dan pemrosesan data dinamis.</p>
+                                <p style="font-size: 0.75rem; color: var(--text-light);">Logika backend web dinamis, arsitektur MVC, CRUD, dan autentikasi.</p>
                             </div>
+
+                            <!-- 3. MYSQL (BASIC) -->
                             <div class="skill-item">
-                                <div class="skill-item-header" style="flex-wrap: wrap; gap: 0.5rem;">
+                                <div class="skill-item-header">
                                     <div style="display: flex; gap: 0.35rem; align-items: center;">
                                         <div class="icon-box" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="MySQL"><i class="fa-solid fa-database"></i></div>
                                     </div>
-                                    <span style="font-weight: 700; font-size: 0.875rem;">MySQL</span>
+                                    <div>
+                                        <span style="font-weight: 700; font-size: 0.875rem;">MYSQL</span>
+                                        <span class="badge" style="background: var(--primary-light); color: var(--primary-text); margin-left: 0.25rem; font-size: 0.65rem;">BASIC</span>
+                                    </div>
                                 </div>
-                                <p style="font-size: 0.75rem; color: var(--text-light);">Perancangan tabel relasional dan query penyimpanan.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Software & Tools Pendukung -->
-                    <div class="card scroll-text-anim" style="transition-delay: 200ms;">
-                        <div class="card-header font-heading">
-                            <div class="icon-box" style="background: #0891b2; color: white;"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                            <div>
-                                <div style="font-size: 1.25rem;">Software &amp; Tools</div>
-                                <div style="font-size: 0.75rem; color: var(--text-light); font-weight: 400;">Perangkat Lunak Pendukung</div>
-                            </div>
-                        </div>
-                        <div class="tools-grid">
-                            <!-- VS Code -->
-                            <div class="tool-item">
-                                <span class="tool-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0-.001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.94-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" fill="#007ACC"/>
-                                    </svg>
-                                </span>
-                                <span>VS Code</span>
+                                <p style="font-size: 0.75rem; color: var(--text-light);">Perancangan basis data relasional, tabel, relasi, dan manipulasi data.</p>
                             </div>
 
-                            <!-- Laragon -->
-                            <div class="tool-item">
-                                <span class="tool-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                        <rect width="24" height="24" rx="5" fill="#0E83CD"/>
-                                        <path d="M6 14.5c0-3.6 2.4-6.5 6-6.5s5 2 5 4.5c0 1.8-1 2.8-2.5 2.8h-1.5v-1.8h1.5c.6 0 .8-.4.8-1 0-1.2-.8-2.3-2.8-2.3-2.3 0-3.5 1.5-3.5 3.8 0 1 .4 1.8 1.3 2H8.2c-.8-.2-1.2-.6-1.2-1.5z" fill="#FFFFFF"/>
-                                        <circle cx="13.2" cy="10.8" r="0.9" fill="#0E83CD"/>
-                                        <path d="M10.8 14.5c0 1.4-.9 2.5-2.2 2.5s-2.1-1.1-2.1-2.5h1.6c0 .6.4.9.8.9s.8-.3.8-.9h1.1z" fill="#FFFFFF"/>
-                                    </svg>
-                                </span>
-                                <span>Laragon</span>
-                            </div>
-
-                            <!-- GitHub -->
-                            <div class="tool-item">
-                                <span class="tool-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-                                    </svg>
-                                </span>
-                                <span>GitHub</span>
-                            </div>
-
-                            <!-- Figma -->
-                            <div class="tool-item">
-                                <span class="tool-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
-                                    <svg width="15" height="21" viewBox="0 0 38 57" fill="none">
-                                        <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
-                                        <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
-                                        <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
-                                        <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
-                                        <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
-                                    </svg>
-                                </span>
-                                <span>Figma</span>
-                            </div>
-
-                            <!-- Canva -->
-                            <div class="tool-item">
-                                <span class="tool-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
-                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                                        <circle cx="12" cy="12" r="10.5" fill="url(#canvaGrad)"/>
-                                        <path d="M15.2 14.8c-1.3 1.2-3.3 1.4-4.8.4-1.6-1.1-2-3.3-1-4.9 1-1.5 3-1.8 4.6-.8.4.3.4.8.1 1.1-.3.3-.8.3-1.1.1-.9-.6-2.2-.4-2.8.5-.7 1.1-.4 2.5.6 3.2 1 .7 2.3.5 3.1-.3.3-.3.8-.3 1.1 0 .3.2.3.6.2.7z" fill="#ffffff"/>
-                                        <defs>
-                                            <linearGradient id="canvaGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#00C4CC"/>
-                                                <stop offset="1" stop-color="#7D2AE8"/>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg>
-                                </span>
-                                <span>Canva</span>
-                            </div>
-
-                            <!-- Ms. Office -->
-                            <div class="tool-item">
-                                <span class="tool-icon" style="display: inline-flex; align-items: center; justify-content: center; width: 1.5rem; height: 1.5rem; flex-shrink: 0;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                        <path d="M21.53 4.309L13.84 1.37a1.44 1.44 0 0 0-1.02 0L2.47 5.228A1.44 1.44 0 0 0 1.5 6.57v10.86a1.44 1.44 0 0 0 .97 1.342l10.35 3.858c.16.06.33.09.5.09s.34-.03.5-.09l7.71-2.939a1.44 1.44 0 0 0 .97-1.342V5.651a1.44 1.44 0 0 0-.97-1.342zM13 3.32l6.5 2.477v12.406L13 20.68V3.32zM3.5 7.155l8-3.048v15.786l-8-2.98V7.155z" fill="#D83B01"/>
-                                    </svg>
-                                </span>
-                                <span>Ms. Office</span>
+                            <!-- 4. FIGMA -->
+                            <div class="skill-item">
+                                <div class="skill-item-header">
+                                    <div style="display: flex; gap: 0.35rem; align-items: center;">
+                                        <div class="icon-box" style="background: rgba(168, 85, 247, 0.1); color: #a855f7; width: 2.25rem; height: 2.25rem; font-size: 1rem;" title="Figma">
+                                            <svg width="14" height="20" viewBox="0 0 38 57" fill="none">
+                                                <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
+                                                <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
+                                                <path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"/>
+                                                <path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"/>
+                                                <path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span style="font-weight: 700; font-size: 0.875rem;">FIGMA</span>
+                                    </div>
+                                </div>
+                                <p style="font-size: 0.75rem; color: var(--text-light);">Perancangan UI/UX antarmuka aplikasi web dan visual prototyping.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Soft Skills Interpersonal -->
-                <div class="col-5 scroll-text-anim" style="transition-delay: 300ms;">
+                <!-- Soft Skill Sesuai CV -->
+                <div class="col-5 scroll-text-anim" style="transition-delay: 200ms;">
                     <div class="card card-alt h-100" style="display: flex; flex-direction: column;">
                         <div class="card-header font-heading">
                             <div class="icon-box" style="background: #7c3aed; color: white;"><i class="fa-solid fa-people-group"></i></div>
                             <div>
-                                <div style="font-size: 1.25rem;">Soft Skills</div>
-                                <div style="font-size: 0.75rem; color: var(--text-light); font-weight: 400;">Karakter &amp; Kolaborasi</div>
+                                <div style="font-size: 1.25rem;">Soft Skill</div>
+                                <div style="font-size: 0.75rem; color: var(--text-light); font-weight: 400;">Karakter Kerja &amp; Kolaborasi</div>
                             </div>
                         </div>
                         
                         <div class="soft-skill-list" style="flex: 1;">
+                            <!-- 1. Pemecahan Masalah (Problem Solving) -->
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(99, 102, 241, 0.1); color: var(--primary);"><i class="fa-solid fa-puzzle-piece"></i></div>
                                 <div>
-                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Problem Solving</h4>
-                                    <p style="font-size: 0.75rem; color: var(--text-light);">Mencari solusi logis atas permasalahan teknis.</p>
+                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Pemecahan Masalah (Problem Solving)</h4>
+                                    <p style="font-size: 0.75rem; color: var(--text-light);">Mencari solusi logis dan terstruktur atas kendala teknis.</p>
                                 </div>
                             </div>
+
+                            <!-- 2. Kerja Sama Tim (Teamwork) -->
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="fa-solid fa-handshake-angle"></i></div>
                                 <div>
-                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Teamwork</h4>
-                                    <p style="font-size: 0.75rem; color: var(--text-light);">Berkolaborasi secara aktif dalam tim proyek.</p>
+                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Kerja Sama Tim (Teamwork)</h4>
+                                    <p style="font-size: 0.75rem; color: var(--text-light);">Berorientasi pada kolaborasi aktif dan komunikasi solid dalam tim.</p>
                                 </div>
                             </div>
-                            <div class="soft-skill-item">
-                                <div class="soft-skill-icon" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;"><i class="fa-solid fa-comments"></i></div>
-                                <div>
-                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Communication</h4>
-                                    <p style="font-size: 0.75rem; color: var(--text-light);">Menyampaikan progres proyek dengan jelas.</p>
-                                </div>
-                            </div>
-                            <div class="soft-skill-item">
-                                <div class="soft-skill-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><i class="fa-solid fa-clock"></i></div>
-                                <div>
-                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Time Management</h4>
-                                    <p style="font-size: 0.75rem; color: var(--text-light);">Pengerjaan fitur agar selesai tepat waktu.</p>
-                                </div>
-                            </div>
+
+                            <!-- 3. Kemampuan Beradaptasi (Adaptability) -->
                             <div class="soft-skill-item">
                                 <div class="soft-skill-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;"><i class="fa-solid fa-arrows-rotate"></i></div>
                                 <div>
-                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Adaptability</h4>
-                                    <p style="font-size: 0.75rem; color: var(--text-light);">Cepat beradaptasi terhadap alur kerja baru.</p>
+                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Kemampuan Beradaptasi (Adaptability)</h4>
+                                    <p style="font-size: 0.75rem; color: var(--text-light);">Cepat belajar dan fleksibel mengikuti standar alur kerja profesional.</p>
+                                </div>
+                            </div>
+
+                            <!-- 4. Manajemen Waktu (Time Management) -->
+                            <div class="soft-skill-item">
+                                <div class="soft-skill-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><i class="fa-solid fa-clock"></i></div>
+                                <div>
+                                    <h4 style="font-size: 0.875rem; font-weight: 700;">Manajemen Waktu (Time Management)</h4>
+                                    <p style="font-size: 0.75rem; color: var(--text-light);">Disiplin dan bertanggung jawab menyelesaikan tugas tepat waktu.</p>
                                 </div>
                             </div>
                         </div>
@@ -827,29 +781,11 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
 
             <div class="project-grid">
                 
-                <!-- Projek 1: Website Pemesanan Makanan (Oktober 2025) -->
+                <!-- Projek 1: Website Company Profile (Agustus – September 2026) -->
                 <article class="project-card scroll-text-anim" style="transition-delay: 100ms;">
                     <div class="project-img-wrapper">
-                        <img src="pemesanan-makanan.jpg" alt="Web Pemesanan Makanan" class="project-img">
-                        <div class="project-date" style="background: rgba(245, 158, 11, 0.9); color: #000;">Okt 2025</div>
-                    </div>
-                    <div class="project-body">
-                        <div>
-                            <div class="project-tags">
-                                <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary-text);">PHP</span>
-                                <span class="badge" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;">MySQL</span>
-                            </div>
-                            <h3 class="project-title font-heading">Web Pemesanan Makanan Online</h3>
-                            <p class="project-desc">Aplikasi web pemesanan makanan dengan fitur penjelajahan katalog menu dan manajemen transaksi keranjang secara efisien.</p>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Projek 2: Website Company Profile (September 2026) -->
-                <article class="project-card scroll-text-anim" style="transition-delay: 200ms;">
-                    <div class="project-img-wrapper">
-                        <img src="company-profile.jpg" alt="Company Profile PT Solusi Koneksi Anda" class="project-img">
-                        <div class="project-date" style="background: rgba(79, 70, 229, 0.9); color: #fff;">Sep 2026</div>
+                        <img src="company-profile.jpg" alt="Pembuatan Website Company Profile" class="project-img">
+                        <div class="project-date" style="background: rgba(79, 70, 229, 0.9); color: #fff;">Agu – Sep 2026</div>
                     </div>
                     <div class="project-body">
                         <div>
@@ -858,16 +794,19 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 <span class="badge" style="background: rgba(168, 85, 247, 0.1); color: #a855f7;">Bootstrap</span>
                                 <span class="badge" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;">MySQL</span>
                             </div>
-                            <h3 class="project-title font-heading">Company Profile</h3>
-                            <p class="project-desc">Website profil perusahaan representatif dilengkapi panel administrasi dinamis untuk pengelolaan konten layanan.</p>
+                            <h3 class="project-title font-heading">Pembuatan Website Company Profile</h3>
+                            <ul class="project-bullet-list">
+                                <li>Merancang website profil responsif dengan panel admin dinamis untuk pembaruan konten.</li>
+                                <li>Mengimplementasikan fitur CRUD, autentikasi pengguna, dan integrasi database dengan Laravel &amp; Bootstrap.</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
 
-                <!-- Projek 3: Web Tabungan -->
-                <article class="project-card scroll-text-anim" style="transition-delay: 300ms;">
+                <!-- Projek 2: Pengembangan Website Pencatatan Keuangan / Tabungan (2026) -->
+                <article class="project-card scroll-text-anim" style="transition-delay: 200ms;">
                     <div class="project-img-wrapper">
-                        <img src="web-tabungan.png" alt="Aplikasi Web Tabungan MyDana" class="project-img">
+                        <img src="web-tabungan.png" alt="Pengembangan Website Pencatatan Keuangan / Tabungan" class="project-img">
                         <div class="project-date" style="background: rgba(16, 185, 129, 0.9); color: #fff;">2026</div>
                     </div>
                     <div class="project-body">
@@ -876,8 +815,33 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                                 <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary-text);">Laravel</span>
                                 <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">MySQL</span>
                             </div>
-                            <h3 class="project-title font-heading">Web Tabungan</h3>
-                            <p class="project-desc">Aplikasi pencatatan tabungan digital dengan fitur setor uang, penarikan saldo, monitoring keuangan, dan riwayat mutasi transaksi.</p>
+                            <h3 class="project-title font-heading">Pengembangan Website Pencatatan Keuangan / Tabungan</h3>
+                            <ul class="project-bullet-list">
+                                <li>Mengembangkan sistem pencatatan arus kas masuk/keluar serta pelaporan riwayat saldo.</li>
+                                <li>Merancang antarmuka yang bersih (user-friendly) dengan integrasi basis data relasional.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Projek 3: Pengembangan Website Pemesanan Makanan (April 2025) -->
+                <article class="project-card scroll-text-anim" style="transition-delay: 300ms;">
+                    <div class="project-img-wrapper">
+                        <img src="pemesanan-makanan.jpg" alt="Pengembangan Website Pemesanan Makanan" class="project-img">
+                        <div class="project-date" style="background: rgba(245, 158, 11, 0.9); color: #000;">April 2025</div>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <div class="project-tags">
+                                <span class="badge" style="background: rgba(99, 102, 241, 0.1); color: var(--primary-text);">PHP Native</span>
+                                <span class="badge" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;">MySQL</span>
+                                <span class="badge" style="background: rgba(234, 179, 8, 0.1); color: #eab308;">JavaScript</span>
+                            </div>
+                            <h3 class="project-title font-heading">Pengembangan Website Pemesanan Makanan</h3>
+                            <ul class="project-bullet-list">
+                                <li>Membangun alur pemesanan makanan berbasis web, mulai dari katalog produk hingga simulasi transaksi.</li>
+                                <li>Mengembangkan logika data dan antarmuka aplikasi menggunakan PHP native, MySQL, dan JavaScript.</li>
+                            </ul>
                         </div>
                     </div>
                 </article>
@@ -887,7 +851,7 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
     </section>
 
     <!-- ==================== FITUR 6: KONTAK & LOKASI ==================== -->
-    <!-- Menampilkan peta lokasi domisili dan tautan WhatsApp langsung -->
+    <!-- Menampilkan peta lokasi domisili dan tautan kontak langsung sesuai CV -->
     <section id="contact" class="section-padding bg-alt">
         <div class="container">
             <div class="section-header scroll-text-anim">
@@ -907,23 +871,29 @@ html.dark .toast { background: #0f172a; color: white; border-color: #1e293b; }
                     </div>
                     
                     <div class="map-wrapper" style="height: 20rem;">
-                        <iframe src="https://www.google.com/maps?q=Desa+Maparah,+Kecamatan+Panjalu,+Kabupaten+Ciamis,+Jawa+Barat+46264&output=embed" loading="lazy" title="Peta Lokasi Domisili"></iframe>
+                        <iframe src="https://www.google.com/maps?q=Kecamatan+Panjalu,+Kabupaten+Ciamis,+Jawa+Barat+46264&output=embed" loading="lazy" title="Peta Lokasi Domisili"></iframe>
                     </div>
                     
                     <div style="padding: 0.875rem 1rem; border-radius: 0.75rem; background: var(--bg-card-alt); border: 1px solid var(--border-color); font-size: 0.8rem; font-weight: 600; display: flex; gap: 0.5rem; align-items: center; margin: 1rem 0 1.5rem;">
                         <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i>
-                        <span>Desa Maparah, Kec. Panjalu, Kab. Ciamis, Jawa Barat 46264</span>
+                        <span>Kec. Panjalu, Kab. Ciamis, Prov. Jawa Barat 46264</span>
                     </div>
 
                     <!-- Tombol Hijau Besar WhatsApp Saja -->
                     <a href="https://wa.me/6281214960561?text=Halo%20Saepul%20Anwar,%20saya%20tertarik%20untuk%20berdiskusi%20mengenai%20proyek%20atau%20peluang%20kerja." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                         <i class="fa-brands fa-whatsapp" style="font-size: 1.5rem;"></i>
-                        <span>Hubungi via WhatsApp</span>
+                        <span>Hubungi via WhatsApp (081214960561)</span>
                     </a>
 
-                    <!-- Fitur Tombol Bulat: Email, Instagram, TikTok -->
+                    <!-- Fitur Tombol Bulat: GitHub, LinkedIn, Email, Instagram, TikTok Sesuai CV -->
                     <div class="social-circle-group">
-                        <a href="mailto:anwarsquad0123@gmail.com" class="social-circle-btn email" title="Kirim Email ke anwarsquad0123@gmail.com" aria-label="Email">
+                        <a href="https://github.com/SaepulAnwar348" target="_blank" rel="noopener noreferrer" class="social-circle-btn github" title="GitHub SaepulAnwar348" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saepul-anwar-790ab4448" target="_blank" rel="noopener noreferrer" class="social-circle-btn linkedin" title="LinkedIn Saepul Anwar" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:anwarsquad0123@gmail.com" class="social-circle-btn email" title="Kirim Email" aria-label="Email">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                         <a href="https://www.instagram.com/splanwarr?vrfl=ZGUzMzM3NWJiOQ==" target="_blank" rel="noopener noreferrer" class="social-circle-btn instagram" title="Instagram @splanwarr" aria-label="Instagram">
