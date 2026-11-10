@@ -337,7 +337,61 @@ html:not(.dark) .profile-frame-inner {
 .project-card:hover .project-title { color: var(--primary-text); }
 .project-desc { font-size: 0.875rem; color: var(--text-light); line-height: 1.625; margin-bottom: 0; }
 
-/* ==================== FITUR: KONTAK & WHATSAPP ==================== */
+/* ==================== FITUR: KONTAK & INFORMASI ==================== */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+}
+@media (min-width: 640px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.contact-info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.875rem;
+    background: var(--bg-card-alt);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    text-decoration: none;
+    color: inherit;
+}
+.contact-info-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 20px -6px rgba(99, 102, 241, 0.25);
+}
+.contact-info-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+.contact-info-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 0.15rem;
+}
+.contact-info-val {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin: 0;
+    word-break: break-word;
+}
+
 .btn-whatsapp {
     width: 100%;
     padding: 1.125rem 2rem;
